@@ -30,7 +30,7 @@
         <img id="seissiete" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRhxJbyc8AvOjBnXE8bOjfEluBs5r-oA2uJQ&s" alt="">
         </div>
         <div id="formulario">
-        <form action="servidor.php" method="POST">
+        <form action="../Controlador/servidor.php" method="POST">
             <label for="usuario">Ingrese su nombre de usuario:</label>
             <input type="text" id="usuario" name="user"><br>
             <label for="contraseña">Ingrese su contraseña</label>
