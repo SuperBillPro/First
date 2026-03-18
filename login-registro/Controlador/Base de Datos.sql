@@ -1,10 +1,10 @@
 CREATE DATABASE IF NOT EXISTS base_usuarios;
 CREATE TABLE IF NOT EXISTS base_usuarios.usuario (
   id INT(11) NOT NULL AUTO_INCREMENT,
-  usr_name VARCHAR(100) NOT NULL,
-  usr_email VARCHAR(100) UNIQUE NOT NULL,
-  usr_pass VARCHAR(100) NOT NULL,
+  user VARCHAR(100) NOT NULL,
+  correo VARCHAR(100) UNIQUE NOT NULL,
+  pass VARCHAR(100) NOT NULL,
   imagen VARCHAR(100) DEFAULT NULL,
-  PRIMARY KEY (id)
+  PRIMARY KEY (correo)
 );
-INSERT INTO base_usuarios.usuario(usr_name, usr_email, usr_pass) VALUES ('Usuario1','usuario122@gmail.com','123456');
+INSERT INTO base_usuarios.usuario(user, correo, pass) VALUES ('Pepe','pepe@gmail.com','12345678');
