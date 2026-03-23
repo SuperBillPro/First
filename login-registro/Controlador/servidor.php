@@ -1,9 +1,12 @@
 <?php
+$user = $_POST["user"];
+$pass = $_POST["pass"];
+$correo = $_POST["correo"];
 // Database configuration
 	$hostname = 'localhost';
 	$username = 'root';
 	$password = '';
-	$database = 'base_usuarios';
+	$database = 'base_de_usuarios';
 	// Establish database connection
 	$conn = mysqli_connect($hostname, $username, $password, $database);
 	// Check connection
@@ -12,22 +15,20 @@
 	}
 
 	// Make query
-	$query = "SELECT * FROM usuario";
-	$result = mysqli_query($conn, $query);
-	$usuarios = [];
-	while($row = mysqli_fetch_assoc($result)) {
-		$usuarios[] = $row;
-	}
-	print_r($usuarios);
+	$sql_check = "SELECT * FROM usuario WHERE usr_email == $correo";
+	$result = mysqli_query($conn, $sql_check);
+	
+	
 
-$user = $_POST["user"];
-$pass = $_POST["pass"];
-$correo = $_POST["correo"];
-if ($user == "Pepe" && $pass == "12345678" && $correo == "pepe@gmail.com"){
-    header("Location:../Vista/perfil.php");
+
+if (mysqli_num_rows($result) ){
+	
+    header("Location:../Vista/error.php");
     exit;
 }else{
-    header("Location:../Vista/index.php");
+		$query = "INSERT INTO base_de_usuarios.usuario(usr_name, usr_email, usr_pass) VALUES ($user,$correo,$pass)";
+
+    header("Location:../Vista/perfil.php");
     exit;
 };
 ?>
