@@ -66,3 +66,20 @@ table, td, th{
     height: 300px;
     width: 400px;
 }
+#ellogin{
+    position: relative;
+    top: 30px;
+    left: 50px;
+}
+h4{
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 55%;
+}
+#sesiar{
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 30%;
+}
