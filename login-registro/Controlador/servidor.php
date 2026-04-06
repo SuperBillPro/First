@@ -34,7 +34,7 @@ $correo = $_POST["correo"];
 	$stmt->execute();
 
 
-		header("Location:../Vista/perfil.php");
+		header("Location:../Vista/perfil.php?user=$user&correo=$correo");
 	exit;
 
 	$stmt->close();
