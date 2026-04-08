@@ -7,7 +7,7 @@
     </head>
     <body>
         <img id="rayo" src="lightning-png-44026.png" alt="">
-        <h1>SuperBill</h1>
+        <h1>Inicio de Sesion</h1>
         
         <div id="tabla">
         <table>
@@ -31,7 +31,7 @@
         </div>
         <div id="formulario">
             <div id="miniform">
-                <form action="../Controlador/servidor.php" method="POST">
+                <form action="../Controlador/servidorlogin.php" method="POST">
                     <label for="usuario">Ingrese su nombre de usuario:</label>
                     <input type="text" id="usuario" name="user"><br>
                     <label for="contraseña">Ingrese su contraseña</label>
@@ -42,8 +42,8 @@
                 </form>
             </div>
         <div id="ellogin">
-            <h4>¿Ya tienes una cuenta?</h4>
-            <input id="sesiar" type="button" value="Iniciar Sesion">
+            <h4>¿Aun no tienes una cuenta?</h4>
+            <a href="registro.php" class="button">Registrarse</a>
         </div>
         <img id="rakai" src="https://media1.tenor.com/m/QbmbfSEMO9cAAAAd/rakai-reading.gif" alt="">
         </div>

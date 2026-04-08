@@ -93,5 +93,9 @@
 
   </div>
 
+            <div id="cerrar">
+
+                <a href="../Controlador/logout.php" class="button">Cerrar Sesion</a>
+            </div>
     </body>
 </html>

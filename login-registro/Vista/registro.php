@@ -7,7 +7,7 @@
     </head>
     <body>
         <img id="rayo" src="lightning-png-44026.png" alt="">
-        <h1>SuperBill</h1>
+        <h1>Registro</h1>
         
         <div id="tabla">
         <table>
@@ -43,7 +43,7 @@
             </div>
         <div id="ellogin">
             <h4>¿Ya tienes una cuenta?</h4>
-            <input id="sesiar" type="button" value="Iniciar Sesion">
+            <a href="iniciosesion.php" class="button">Iniciar Sesión</a>
         </div>
         <img id="rakai" src="https://media1.tenor.com/m/QbmbfSEMO9cAAAAd/rakai-reading.gif" alt="">
         </div>
