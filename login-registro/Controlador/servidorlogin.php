@@ -15,7 +15,7 @@ $correo = $_POST["correo"];
 	}
 
 	// Make query
-	
+	session_start();
 	//$sql_check = "SELECT * FROM usuario WHERE usr_email == $correo";
 	//$result = mysqli_query($conn, $sql_check);
 		$sql_check = "SELECT * FROM usuario WHERE usr_email = ? AND usr_name = ? AND usr_pass = ?";
@@ -23,9 +23,13 @@ $correo = $_POST["correo"];
 	$stmt->bind_param("sss", $correo, $user, $pass);
 	$stmt->execute();
 	$result = $stmt->get_result();
-
+	
 	if ($result->num_rows > 0) {
-    header("Location:../Vista/perfil.php?user=$user&correo=$correo");
+		// show user id in result
+		$usuario = $result->fetch_assoc();
+		print_r($usuario);
+		$_SESSION['user'] = $usuario["id"];
+    	header("Location:../Vista/perfil.php?user=$user&correo=$correo");
     exit;
 }else{
 

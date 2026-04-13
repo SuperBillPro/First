@@ -15,7 +15,7 @@ $correo = $_POST["correo"];
 	}
 
 	// Make query
-	
+	session_start();
 	//$sql_check = "SELECT * FROM usuario WHERE usr_email == $correo";
 	//$result = mysqli_query($conn, $sql_check);
 		$sql_check = "SELECT * FROM usuario WHERE usr_email = ?";
@@ -23,7 +23,7 @@ $correo = $_POST["correo"];
 	$stmt->bind_param("s", $correo);
 	$stmt->execute();
 	$result = $stmt->get_result();
-
+$_SESSION['user'] = $usuario["id"];
 	if ($result->num_rows > 0) {
     header("Location:../Vista/error.php");
     exit;

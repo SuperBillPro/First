@@ -1,6 +1,11 @@
 <?php
     $user = $_GET["user"];
     $correo = $_GET["correo"];
+    session_start();
+    if (!isset($_SESSION['user'])) {
+        header("Location:../Vista/iniciosesion.php");
+        exit;
+    }
 ?>
 <html>
     <head>
