@@ -19,6 +19,26 @@
             <p>Tu nombre de usuario es: <?php echo $user; ?></p>
         
             <p>Tu correo es: <?php echo $correo; ?></p>
+
+            <h1>Lista de Elementos</h1>
+            <ul> id="lista_elementos"</ul>
+            <button onclick="openModal();">Añadir elemento</button>
+            <dialog id="formModal">
+              <h3>Añadir elemento</h3>
+              <input type="text" id="nuevo_elemento">
+              <button onclick="añadirElemento();">Añadir</button>
+              <button onclick="closeModal();">Cerrar</button>
+            </dialog>
+            <script>
+              function openModal() {
+                const modal = document.getElementById('formModal');
+                modal.showModal();
+              }
+              function closeModal() {
+                const modal = document.getElementById('formModal');
+                modal.close();
+              }
+            </script>
         </div>
 
          <div class="wrapper" id="stewie">
