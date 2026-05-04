@@ -29,6 +29,7 @@ $correo = $_POST["correo"];
 		$usuario = $result->fetch_assoc();
 		print_r($usuario);
 		$_SESSION['user'] = $usuario["id"];
+		$_SESSION['imagen'] = $usuario["imagen"];
     	header("Location:../Vista/perfil.php?user=$user&correo=$correo");
     exit;
 }else{

@@ -31,13 +31,15 @@
         </div>
         <div id="formulario">
             <div id="miniform">
-                <form action="../Controlador/servidor.php" method="POST">
+                <form action="../Controlador/servidor.php" method="POST" enctype="multipart/form-data">
                     <label for="usuario">Ingrese su nombre de usuario:</label>
                     <input type="text" id="usuario" name="user"><br>
                     <label for="contraseña">Ingrese su contraseña</label>
                     <input type="text"  id="contraseña" name="pass"><br>
                     <label for="gmail">Ingrese su Gmail</label><br>
                     <input type="text" id="mail" name="correo"><br>
+                    <span>Selecciona un archivo:</span>
+                    <input type="file" name="uploadedFile" />
                     <input type="submit">
                 </form>
             </div>

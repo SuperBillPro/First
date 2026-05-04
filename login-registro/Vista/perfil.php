@@ -13,7 +13,7 @@
     </head>
     <body>
         <div id="cajita">
-            <h1>¡Hola Mundo!</h1>
+            <img id="foto" src="imagenes/<?php echo $_SESSION['imagen']; ?>" alt="Imagen de perfil">
             <p>Iniciaste sesion</p>
         
             <p>Tu nombre de usuario es: <?php echo $user; ?></p>
@@ -26,10 +26,19 @@
             <dialog id="formModal">
               <h3>Añadir elemento</h3>
               <input type="text" id="nuevo_elemento">
-              <button onclick="añadirElemento();">Añadir</button>
+              <button onclick="añadirProducto();">Añadir</button>
               <button onclick="closeModal();">Cerrar</button>
             </dialog>
             <script>
+              function añadirProducto(){
+                const btn_eliminar = document.createElement("button");
+                btn_eliminar.textContent = "Eliminar";
+                btn_eliminar.addEventListener("click", function(){
+                  li.remove();
+                })
+                li.appendChild(btn_eliminar);
+              }
+
               function openModal() {
                 const modal = document.getElementById('formModal');
                 modal.showModal();
