@@ -45,7 +45,7 @@
             </div>
         <div id="ellogin">
             <h4>¿Ya tienes una cuenta?</h4>
-            <a href="iniciosesion.php" class="button">Iniciar Sesión</a>
+            <a id="link" href="iniciosesion.php" class="button">Iniciar Sesión</a>
         </div>
         <img id="rakai" src="https://media1.tenor.com/m/QbmbfSEMO9cAAAAd/rakai-reading.gif" alt="">
         </div>

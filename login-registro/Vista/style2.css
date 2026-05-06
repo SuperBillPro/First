@@ -32,12 +32,16 @@ h1{
     background-color: darkgreen;
     padding: 10px;
 }
+#lista{
+  padding-top: 300px;
+  padding-left: 70px;
+}
 .wrapper{
   position:relative;
   width:210px;
   height:210px;
   left:50%;
-  top:50%;
+  top:52%;
   margin-left:-120px;
   margin-top:-105px;
 }

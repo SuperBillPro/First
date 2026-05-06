@@ -20,36 +20,9 @@
         
             <p>Tu correo es: <?php echo $correo; ?></p>
 
-            <h1>Lista de Elementos</h1>
-            <ul> id="lista_elementos"</ul>
-            <button onclick="openModal();">Añadir elemento</button>
-            <dialog id="formModal">
-              <h3>Añadir elemento</h3>
-              <input type="text" id="nuevo_elemento">
-              <button onclick="añadirProducto();">Añadir</button>
-              <button onclick="closeModal();">Cerrar</button>
-            </dialog>
-            <script>
-              function añadirProducto(){
-                const btn_eliminar = document.createElement("button");
-                btn_eliminar.textContent = "Eliminar";
-                btn_eliminar.addEventListener("click", function(){
-                  li.remove();
-                })
-                li.appendChild(btn_eliminar);
-              }
-
-              function openModal() {
-                const modal = document.getElementById('formModal');
-                modal.showModal();
-              }
-              function closeModal() {
-                const modal = document.getElementById('formModal');
-                modal.close();
-              }
-            </script>
+            
         </div>
-
+       
          <div class="wrapper" id="stewie">
     <div class="head">
       <div class="hair-wrapper">
@@ -131,5 +104,40 @@
 
                 <a href="../Controlador/logout.php" class="button">Cerrar Sesion</a>
             </div>
+             <div id="lista">
+          <h2>Lista de Elementos</h2>
+            <ul class="lista_elementos"></ul>
+            <button onclick="openModal();">Añadir elemento</button>
+            <dialog id="formModal">
+              <h3>Añadir elemento</h3>
+              <input type="text" id="nuevo_elemento">
+              <button onclick="añadirProducto();">Añadir</button>
+              <button onclick="closeModal();">Cerrar</button>
+            </dialog>
+            <script>
+              function añadirProducto(){
+                const nuevo_elemento = document.getElementById("nuevo_elemento").value;
+                const li = document.createElement("li");
+                li.textContent = nuevo_elemento;
+                document.querySelector(".lista_elementos").appendChild(li);
+              
+                const btn_eliminar = document.createElement("button");
+                btn_eliminar.textContent = "Eliminar";
+                btn_eliminar.addEventListener("click", function(){
+                  li.remove();
+                })
+                li.appendChild(btn_eliminar);
+              }
+
+              function openModal() {
+                const modal = document.getElementById('formModal');
+                modal.showModal();
+              }
+              function closeModal() {
+                const modal = document.getElementById('formModal');
+                modal.close();
+              }
+            </script>
+        </div>
     </body>
 </html>
