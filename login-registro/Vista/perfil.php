@@ -100,6 +100,30 @@
 
   </div>
 
+            <div id="tabla">
+              <?php 
+                $hostname = 'localhost';
+                $username = 'root';
+                $password = '';
+                $database = 'base_de_usuarios';
+                $conn = mysqli_connect($hostname, $username, $password, $database);
+                if(!$conn){
+                  die('Connection failed: ' . mysqli_connect_error());
+                }
+                $sql = "SELECT * FROM usuario";
+                $result = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($result) > 0) {
+                  echo "<table><tr><th>Nombre de Usuario</th><th>Correo</th></tr>";
+                  while($row = mysqli_fetch_assoc($result)) {
+                    echo  "</td><td>" . $row["usr_name"]. "</td><td>" . $row["usr_email"]. "</td></tr>";
+                  }
+                  echo "</table>";
+                } else {
+                  echo "0 results";
+                }
+                mysqli_close($conn);
+              ?>
+            </div>
             <div id="cerrar">
 
                 <a href="../Controlador/logout.php" class="button">Cerrar Sesion</a>

@@ -36,6 +36,18 @@ h1{
   padding-top: 300px;
   padding-left: 70px;
 }
+#tabla{
+    position: absolute;
+    top: 11%;
+    left: 65%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: lightblue;}
+
+table, td, th{
+    border: 1px solid #000814;
+    color: #000814;
+}
 .wrapper{
   position:relative;
   width:210px;
